@@ -1,0 +1,2 @@
+https://github.com/Qwant/qwant-basic-gl-style.git
+7413d03

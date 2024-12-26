@@ -1,0 +1,38 @@
+Josefin Sans Bold
+Josefin Sans Italic
+Josefin Sans Medium
+Josefin Sans Medium Italic
+Josefin Sans Regular
+Jost Italic
+Jost Medium
+Jost Regular
+Metropolis Light
+Metropolis Light Italic
+Metropolis Medium Italic
+Metropolis Regular
+Noto Sans Bold
+Noto Sans Bold Italic
+Noto Sans Condensed
+Noto Sans Extra Bold
+Noto Sans Italic
+Noto Sans Light Italic
+Noto Sans Medium
+Noto Sans Regular
+Noto Sans Semi Bold Italic
+Nunito Bold
+Nunito Extra Bold
+Nunito Regular
+Nunito Semi Bold
+Open Sans Italic
+Open Sans Regular
+Open Sans Semi Bold Italic
+Poppins Italic
+Poppins Medium
+Poppins Regular
+Roboto Condensed Italic
+Roboto Medium
+Roboto Regular
+Montserrat Regular
+Montserrat Medium
+Montserrat Italic
+Montserrat Medium Italic

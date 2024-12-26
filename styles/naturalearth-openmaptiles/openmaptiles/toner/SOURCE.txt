@@ -1,0 +1,2 @@
+https://github.com/openmaptiles/maptiler-toner-gl-style.git
+8688fbd

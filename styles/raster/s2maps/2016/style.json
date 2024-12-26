@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "s2maps-sentinel2-2016": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/s2maps-sentinel2-2016.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "s2maps-sentinel2-2016",
+      "type": "raster",
+      "source": "s2maps-sentinel2-2016"
+    }
+  ]
+}

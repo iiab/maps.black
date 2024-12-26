@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "naturalearth-NE2_HR_LC-WEBP": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/naturalearth-NE2_HR_LC-WEBP.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "naturalearth-NE2_HR_LC-WEBP",
+      "type": "raster",
+      "source": "naturalearth-NE2_HR_LC-WEBP"
+    }
+  ]
+}

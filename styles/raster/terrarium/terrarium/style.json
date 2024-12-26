@@ -1,0 +1,12 @@
+{
+  "version": 8,
+  "sources": {
+    "terrarium-visual": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/terrarium.json"
+    }
+  },
+  "layers": [
+    {"id": "terrarium-visual", "type": "raster", "source": "terrarium-visual"}
+  ]
+}

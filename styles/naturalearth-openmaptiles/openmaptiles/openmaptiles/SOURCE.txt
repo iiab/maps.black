@@ -1,0 +1,2 @@
+https://github.com/openmaptiles/openmaptiles.git
+22cd373

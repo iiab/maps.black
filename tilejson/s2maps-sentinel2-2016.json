@@ -1,0 +1,8 @@
+{
+  "tiles": [
+    "https://v1.maps.black/s2maps-sentinel2-2016/{z}/{x}/{y}.jpg"
+  ],
+  "minzoom": 0,
+  "maxzoom": 13,
+  "tileSize": 256
+}

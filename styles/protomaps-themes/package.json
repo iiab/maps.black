@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "protomaps-themes-base": "^4.3.1"
+  }
+}

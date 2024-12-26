@@ -1,0 +1,2 @@
+https://github.com/openmaptiles/maptiler-basic-gl-style.git
+2374f74

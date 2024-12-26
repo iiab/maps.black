@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "naturalearth-HYP_HR_SR_W-WEBP": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/naturalearth-HYP_HR_SR_W-WEBP.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "naturalearth-HYP_HR_SR_W-WEBP",
+      "type": "raster",
+      "source": "naturalearth-HYP_HR_SR_W-WEBP"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+https://github.com/openmaptiles/osm-bright-gl-style.git
+65c6993

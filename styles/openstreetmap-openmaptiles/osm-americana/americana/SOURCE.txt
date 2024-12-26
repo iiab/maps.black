@@ -1,0 +1,2 @@
+git@github.com:osm-americana/openstreetmap-americana.git
+f2239ff6

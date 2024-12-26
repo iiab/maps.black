@@ -1,0 +1,8 @@
+{
+  "tiles": [
+    "https://v1.maps.black/terrarium/{z}/{x}/{y}.png"
+  ],
+  "minzoom": 0,
+  "maxzoom": 13,
+  "tileSize": 256
+}

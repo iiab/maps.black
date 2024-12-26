@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "naturalearth6-LC_HR_HD-WEBP": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/naturalearth6-LC_HR_HD-WEBP.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "naturalearth6-LC_HR_HD-WEBP",
+      "type": "raster",
+      "source": "naturalearth6-LC_HR_HD-WEBP"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 8,
+  "sources": {
+    "naturalearth-SR_HR-WEBP": {
+      "type": "raster",
+      "url": "https://v1.maps.black/tilejson/naturalearth-SR_HR-WEBP.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "naturalearth-SR_HR-WEBP",
+      "type": "raster",
+      "source": "naturalearth-SR_HR-WEBP"
+    }
+  ]
+}

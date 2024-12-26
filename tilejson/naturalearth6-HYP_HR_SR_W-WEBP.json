@@ -1,0 +1,8 @@
+{
+  "tiles": [
+    "https://v1.maps.black/naturalearth6-HYP_HR_SR_W-WEBP/{z}/{x}/{y}.webp"
+  ],
+  "minzoom": 0,
+  "maxzoom": 6,
+  "tileSize": 512
+}
