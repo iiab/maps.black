@@ -3,17 +3,6 @@
 
 build() {
   set -xeuo pipefail
-  (cd tilejson/ && . ./build.sh && build)
-  (cd client/ && . ./build.sh && build)
-  (cd styles/ && . ./build.sh && build)
-  (cd resourcetiles/ && . ./build.sh && build)
-  (cd osm-vector/ && . ./build.sh && build)
-  (cd gh-pages/ && . ./build.sh && build_extracts)
-  link_all
-}
-
-build_full() {
-  set -xeuo pipefail
   # Include rust in path in builder container
   export HOME="/root/"
   . "/root/.cargo/env"
