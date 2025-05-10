@@ -353,22 +353,6 @@ Type=oneshot
 BindPaths=/usr/local/0-9se/sites/maps.black
 WorkingDirectory=/usr/local/0-9se/sites/maps.black
 ExecStart=/usr/local/0-9se/sites/.maps.black/build.sh prep
-ExecStart=/usr/local/0-9se/sites/maps.black/build.sh build
-
-[Install]
-WantedBy=multi-user.target
-EOF
-  cat >"/tmp/maps.black/etc/systemd/system/maps.black-build-full.service" <<EOF
-[Unit]
-Description="maps.black build full"
-After=network-online.target
-Requires=network-online.target
-
-[Service]
-Type=oneshot
-BindPaths=/usr/local/0-9se/sites/maps.black
-WorkingDirectory=/usr/local/0-9se/sites/maps.black
-ExecStart=/usr/local/0-9se/sites/.maps.black/build.sh prep
 ExecStart=/usr/local/0-9se/sites/maps.black/build.sh build_full
 
 [Install]
