@@ -1,6 +1,6 @@
 # maps.black
 
-See https://maps.black/ or https://maps-black.github.io/ for info
+See <https://maps.black/> or <https://maps-black.github.io/> for info
 
 ## Licensing
 
@@ -63,11 +63,10 @@ For datasets the licenses are included in the datasets.
 - [ ] Add maplibre-geoman-free with realtime capabilities (via webrtc datachannels)
 - [ ] Add CSP guidance
 - [ ] Create torrents for all the large datasets
+- [ ] Build steps for <https://shortbread.geofabrik.de/shapefiles/admin-points-4326.zip>: <https://github.com/shortbread-tiles/shortbread-tilemaker/blob/main/boundary_labels_shape_file.md>
 
 ## Issues
 
-- <https://github.com/onthegomap/planetiler>
-  - No source or build steps for <https://shortbread.geofabrik.de/shapefiles/admin-points-4326.zip>
 - <https://github.com/shortbread-tiles/shortbread-docs>
   - No admin levels past 4 (6 for counties)
   - language tag separator: <https://github.com/shortbread-tiles/shortbread-docs/issues/72>
@@ -83,7 +82,7 @@ For datasets the licenses are included in the datasets.
   - Reason for including both earth and ocean
 - <https://github.com/openmaptiles/openmaptiles>
   - Licensing, interpertation of CC-BY <https://github.com/openmaptiles/openmaptiles/issues/1318>
-    - CC-BY cannot include requirements of where to display the attributions: https://creativecommons.org/faq/#can-i-insist-on-the-exact-placement-of-the-attribution-credit but openmaptiles does
+    - CC-BY cannot include requirements of where to display the attributions: <https://creativecommons.org/faq/#can-i-insist-on-the-exact-placement-of-the-attribution-credit> but openmaptiles does
 
 ## Fonts excluded due to missing licenses
 
