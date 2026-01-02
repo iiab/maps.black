@@ -179,7 +179,8 @@ const resourcesHandler = async (params, abortController) => {
           type: 'globe'
         }
       }
-      const terrarium = { type: "raster-dem", url: `pmtiles://${new URL('terrarium-z0-z10.pmtiles', mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: 10 }
+      // IIAB NOTE - I call it terrarium-pmtiles to distinguish it from the squashfs-based zoom levels 11-13
+      const terrarium = { type: "raster-dem", url: `pmtiles://${new URL('terrarium-z0-z10.pmtiles', mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomTerrariumPmtiles() }
       if (protocol === 'relativeresources:') {
         delete terrarium.url
         terrarium.tiles = [new URL('terrarium/{z}/{x}/{y}.png', mapComponents[mapid].baseurl).toString().replace(/%7B/g, "{").replace(/%7D/g, "}")]
@@ -237,6 +238,9 @@ const resourcesHandler = async (params, abortController) => {
               buffer: 1,
             }),
           ],
+
+          // IIAB NOTE: I'm not sure why this is 15 given that terrarium only goes up to 13.
+          // But, iiab does not use contours for now so we'll worry about that later.
           maxzoom: 15,
         }
         data.layers.push({
@@ -302,7 +306,7 @@ const resourcesHandler = async (params, abortController) => {
         } else if (k.startsWith('s2maps')) {
           mapComponents[mapid].requireAttribution = true
           checkAttribution(mapid)
-          data.sources[k] = { type: "raster", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: 13 }
+          data.sources[k] = { type: "raster", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomS2maps() }
           if (protocol === 'relativeresources:') {
             delete data.sources[k].url
             data.sources[k].tiles = [new URL(`${k}/{z}/{x}/{y}.jpg`, mapComponents[mapid].baseurl).toString().replace(/%7B/g, "{").replace(/%7D/g, "}")]
@@ -312,7 +316,7 @@ const resourcesHandler = async (params, abortController) => {
             mapComponents[mapid].requireAttribution = true
             checkAttribution(mapid)
           }
-          data.sources[k] = { type: "vector", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, maxzoom: 14 }
+          data.sources[k] = { type: "vector", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, maxzoom: iiabMapsDotBlackPatch.getMaxZoomOSM() }
           if (['naturalearth-openmaptiles', 'naturalearth-protomaps', 'naturalearth-shortbread'].includes(k)) {
             data.sources[k].maxzoom = 8
           }
