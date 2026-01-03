@@ -179,7 +179,6 @@ const resourcesHandler = async (params, abortController) => {
           type: 'globe'
         }
       }
-      // IIAB NOTE - I call it terrarium-pmtiles to distinguish it from the squashfs-based zoom levels 11-13
       const terrarium = { type: "raster-dem", url: `pmtiles://${new URL('terrarium-z0-z10.pmtiles', mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomTerrariumPmtiles() }
       if (protocol === 'relativeresources:') {
         delete terrarium.url
