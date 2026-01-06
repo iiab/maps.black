@@ -179,7 +179,8 @@ const resourcesHandler = async (params, abortController) => {
           type: 'globe'
         }
       }
-      const terrarium = { type: "raster-dem", url: `pmtiles://${new URL('terrarium-z0-z10.pmtiles', mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomTerrariumPmtiles() }
+      const iiabPmtilesName = iiabMapsDotBlackPatch.getPmtilesName('terrarium-z0-z10')
+      const terrarium = { type: "raster-dem", url: `pmtiles://${new URL(`${iiabPmtilesName}.pmtiles`, mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomTerrariumPmtiles() }
       if (protocol === 'relativeresources:') {
         delete terrarium.url
         terrarium.tiles = [new URL('terrarium/{z}/{x}/{y}.png', mapComponents[mapid].baseurl).toString().replace(/%7B/g, "{").replace(/%7D/g, "}")]
@@ -278,6 +279,7 @@ const resourcesHandler = async (params, abortController) => {
         })
       }
       Object.keys(data.sources).forEach(k => {
+        const iiabPmtilesName = iiabMapsDotBlackPatch.getPmtilesName(k)
         let datakey = k
         if (k === 'terrarium' || k === 'hillshade' || k === 'contours') {
           mapComponents[mapid].requireAttribution = true
@@ -305,7 +307,7 @@ const resourcesHandler = async (params, abortController) => {
         } else if (k.startsWith('s2maps')) {
           mapComponents[mapid].requireAttribution = true
           checkAttribution(mapid)
-          data.sources[k] = { type: "raster", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomS2maps() }
+          data.sources[k] = { type: "raster", url: `pmtiles://${new URL(`${iiabPmtilesName}.pmtiles`, mapComponents[mapid].baseurl)}`, tileSize: 256, maxzoom: iiabMapsDotBlackPatch.getMaxZoomS2maps() }
           if (protocol === 'relativeresources:') {
             delete data.sources[k].url
             data.sources[k].tiles = [new URL(`${k}/{z}/{x}/{y}.jpg`, mapComponents[mapid].baseurl).toString().replace(/%7B/g, "{").replace(/%7D/g, "}")]
@@ -315,7 +317,7 @@ const resourcesHandler = async (params, abortController) => {
             mapComponents[mapid].requireAttribution = true
             checkAttribution(mapid)
           }
-          data.sources[k] = { type: "vector", url: `pmtiles://${new URL(`${k}.pmtiles`, mapComponents[mapid].baseurl)}`, maxzoom: iiabMapsDotBlackPatch.getMaxZoomOSM() }
+          data.sources[k] = { type: "vector", url: `pmtiles://${new URL(`${iiabPmtilesName}.pmtiles`, mapComponents[mapid].baseurl)}`, maxzoom: iiabMapsDotBlackPatch.getMaxZoomOSM() }
           if (['naturalearth-openmaptiles', 'naturalearth-protomaps', 'naturalearth-shortbread'].includes(k)) {
             data.sources[k].maxzoom = 8
           }
