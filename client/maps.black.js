@@ -734,6 +734,8 @@ const maplib = async (mapcontainer, component) => {
     }));
   }
 
+  iiabMapsDotBlackPatch.init(component)
+
   component.dispatchEvent(new CustomEvent('map', { detail: { map } }))
 }
 export default maplib
