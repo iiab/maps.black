@@ -96,7 +96,7 @@ const checkAttribution = (mapid) => {
 //                    z21: 2097152
 
 // TODO: Clean this up. Separate into two handlers and break out handling of languages, etc.
-const resourcesHandler = async (params, abortController) => {
+const _resourcesHandler = async (params, abortController) => {
   const url = new URL(params.url)
   const protocol = url.protocol
   let mapid, inArchivePath, metadata, provider, inArchiveUrl, path
@@ -517,6 +517,10 @@ const resourcesHandler = async (params, abortController) => {
     // Any non-font, non-json, non-image
     return provider.getZxy(19, 0, fileIndex)
   }
+}
+const resourcesHandler = async (params, abortController) => {
+  return _resourcesHandler(params, abortController)
+    .then(iiabMapsDotBlackPatch.patchResource)
 }
 maplibregl.addProtocol('pmtileresources', resourcesHandler)
 maplibregl.addProtocol('relativeresources', resourcesHandler)
