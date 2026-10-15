@@ -10,6 +10,8 @@ import { ShieldRenderer, transposeImageData } from "@americana/maplibre-shield-g
 // TODO: Will be core feature in https://github.com/maplibre/maplibre-style-spec/issues/583, use that instead of plugin then.
 import mlcontour from 'maplibre-contour'
 
+iiabMapsDotBlackPatch.getPMTilesClass(PMTiles)
+
 if (maplibregl.getRTLTextPluginStatus() !== 'loaded') maplibregl.setRTLTextPlugin(URL.createObjectURL(new Blob([rtlPlugin], { type: "application/javascript" })), false)
 // Defined by esbuild, mbtiles takes about 1.7mb. Should only be used for preview purposes probably
 if (mbtiles) await import('./mbtiles.js').then(({ addMbtilesProtocol }) => addMbtilesProtocol(maplibregl))
